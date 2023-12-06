@@ -1,0 +1,712 @@
+fileFormatVersion: 2
+guid: 910d32dcc2a80914bb1cd76d9a18c7c7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_0
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 1102
+        width: 17
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec89972461bda6b4ea0f06f0f8bd2ca3
+      internalID: -402930823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_1
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 1097
+        width: 59
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939f34416f0c4b0468be819506f4fb93
+      internalID: -510847651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_2
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1097
+        width: 59
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f9324f726eb3e4eb2e07c310c517be
+      internalID: -1108771085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_3
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 889
+        width: 17
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c1aeda8b21a474bbfc3f90af803e00
+      internalID: 181994082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_4
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 788
+        width: 494
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a57eec542c5d40a48814bcae4c4d69ad
+      internalID: -1479794308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_5
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 835
+        width: 59
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b411b47909d8ea54a8c8ddc1965cb860
+      internalID: -1680262548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_6
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 795
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: febc0ace4ee46484c87212bd1171c3ea
+      internalID: -324165830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_7
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 774
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4580302c64e20248b0077c496ae82c0
+      internalID: 2025078966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_8
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 669
+        width: 102
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a2e9ae82f94b446b99e783d14be277
+      internalID: -458596770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_9
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 655
+        width: 84
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668630eb50d09d34d88c7ca6b0c58b45
+      internalID: -934705743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_10
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 669
+        width: 85
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 833c1fd9ca269f548ac4b946b565449c
+      internalID: 860414343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_11
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 669
+        width: 121
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935b5e2796d3c23459b4c72dff699de5
+      internalID: 481030154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_12
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 688
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef029e760b948f841804fda0d94bebcd
+      internalID: 1404177998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_13
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 708
+        width: 96
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d1c515160ad214997177144ae38ce5
+      internalID: -867214206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_14
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 666
+        width: 117
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d99297b0bb136845acc7dbb1ed93f01
+      internalID: -1963480598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_15
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 658
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921ba521f01f12643b4b6587981e6e86
+      internalID: 1793424612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_16
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 545
+        width: 26
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee23b7bafeddff40913a2b760bda744
+      internalID: -2072435640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_17
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 569
+        width: 25
+        height: 43
+      alignment: 9
+      pivot: {x: 0.4839502, y: 0.08932708}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e7870edf99fe043ab829a85fc9ff21
+      internalID: -869105788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_18
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 578
+        width: 96
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02775cfe21d33844a37b9155e61ad00
+      internalID: 527279325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_19
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 578
+        width: 96
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7350e5212c3ae0046a4ace568952b8e8
+      internalID: 552489391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_20
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 480
+        width: 119
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd7ca5ed8c5cf34ca5e24c092440a15
+      internalID: 721459096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_21
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 457
+        width: 41
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3360874051662b4992281040c5e41e0
+      internalID: -407714830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_22
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 160
+        width: 140
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852ae2fa10785614aa42990d23d0a603
+      internalID: -1058815375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_23
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 158
+        width: 17
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e473f78ef3db4a4d99e9c209a23af19
+      internalID: 1284081882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_24
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 143
+        width: 59
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c56d67427f3b14cb97cf87674885aa
+      internalID: 101284013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Town_AbovePlayer_Assets_25
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 158
+        width: 17
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a68b29f24559a44b9e739ca9e479d84
+      internalID: 140907003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Town_AbovePlayer_Assets_0: -402930823
+      Town_AbovePlayer_Assets_1: -510847651
+      Town_AbovePlayer_Assets_10: 860414343
+      Town_AbovePlayer_Assets_11: 481030154
+      Town_AbovePlayer_Assets_12: 1404177998
+      Town_AbovePlayer_Assets_13: -867214206
+      Town_AbovePlayer_Assets_14: -1963480598
+      Town_AbovePlayer_Assets_15: 1793424612
+      Town_AbovePlayer_Assets_16: -2072435640
+      Town_AbovePlayer_Assets_17: -869105788
+      Town_AbovePlayer_Assets_18: 527279325
+      Town_AbovePlayer_Assets_19: 552489391
+      Town_AbovePlayer_Assets_2: -1108771085
+      Town_AbovePlayer_Assets_20: 721459096
+      Town_AbovePlayer_Assets_21: -407714830
+      Town_AbovePlayer_Assets_22: -1058815375
+      Town_AbovePlayer_Assets_23: 1284081882
+      Town_AbovePlayer_Assets_24: 101284013
+      Town_AbovePlayer_Assets_25: 140907003
+      Town_AbovePlayer_Assets_3: 181994082
+      Town_AbovePlayer_Assets_4: -1479794308
+      Town_AbovePlayer_Assets_5: -1680262548
+      Town_AbovePlayer_Assets_6: -324165830
+      Town_AbovePlayer_Assets_7: 2025078966
+      Town_AbovePlayer_Assets_8: -458596770
+      Town_AbovePlayer_Assets_9: -934705743
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
