@@ -14,9 +14,8 @@ public class PunkKid_MainPlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    if (IsAbleToMove)
-       {
-
+        if (IsAbleToMove)
+        {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
             

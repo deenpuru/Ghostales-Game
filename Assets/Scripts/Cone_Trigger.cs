@@ -16,7 +16,6 @@ public class Cone_Trigger : MonoBehaviour
             StartCoroutine(WalkAway());
             
         }
-        
     }
     
 
