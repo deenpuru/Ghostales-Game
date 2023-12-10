@@ -41,12 +41,7 @@ public class DialogueController : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log("Start: _element = " + _element);
-        PortraitImageDisplayArea.sprite = _portraitSprite;
-    }
+    
 
     // Update is called once per frame
     void Update()
@@ -59,6 +54,7 @@ public class DialogueController : MonoBehaviour
 
         {
             StopPlayer();
+            PortraitImageDisplayArea.sprite = _portraitSprite;
             dialogueContainer.SetActive(true);
             NextSentence();
         }
