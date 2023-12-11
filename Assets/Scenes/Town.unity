@@ -4093,7 +4093,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1848245723}
   - component: {fileID: 1848245726}
-  - component: {fileID: 1848245725}
   - component: {fileID: 1848245724}
   - component: {fileID: 1848245727}
   m_Layer: 0
@@ -4112,7 +4111,7 @@ Transform:
   m_GameObject: {fileID: 1848245722}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.573, y: -0.241, z: 0}
+  m_LocalPosition: {x: 6.573, y: -0.246, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4139,23 +4138,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!320 &1848245725
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848245722}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 7b3f84ac919732749bafd7c486cc6e6c, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings: []
-  m_ExposedReferences:
-    m_References: []
 --- !u!212 &1848245726
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4197,7 +4179,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1304579231, guid: 7737e5018109ac344942e05b3ac349c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df52157750ac7734b963aa303204caac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4207,7 +4189,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &1848245727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4220,7 +4202,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7753028ce40bf3146b992f359a91d5f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrashCanAnim: {fileID: 0}
+  _notInteracted: 1
+  _minRange: 3
+  _maxRange: 20
+  _animationTrigger: TrashCanAnim
 --- !u!1 &1885926796
 GameObject:
   m_ObjectHideFlags: 0
