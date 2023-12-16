@@ -14,7 +14,7 @@ public class PunkKid_MainPlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (IsAbleToMove)
+        if (IsAbleToMove)
         {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
@@ -23,12 +23,13 @@ public class PunkKid_MainPlayerControls : MonoBehaviour
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
 
+            if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Vertical") == -1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1)
+            {
+                animator.SetFloat("LastHorizontal", Input.GetAxisRaw("Horizontal"));
+                animator.SetFloat("LastVertical", Input.GetAxisRaw("Vertical"));
+            }
         }  
-         if (Input.GetAxisRaw("Horizontal")==1 || Input.GetAxisRaw("Vertical")==-1 || Input.GetAxisRaw("Horizontal")==-1 || Input.GetAxisRaw("Vertical") ==1)
-         {
-            animator.SetFloat("LastHorizontal", Input.GetAxisRaw("Horizontal"));
-            animator.SetFloat("LastVertical", Input.GetAxisRaw("Vertical"));
-         }
+        
         
     }
 

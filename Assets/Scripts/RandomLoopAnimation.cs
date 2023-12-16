@@ -22,10 +22,8 @@ public class RandomLoopAnimation : MonoBehaviour
             if (_notInteracted)
             {
                 int testRandomTime = Random.Range(_minRange, _maxRange);
-                Debug.Log("test random time = " + testRandomTime);
                 GetComponent<Animator>().SetTrigger(_animationTrigger);
                 yield return new WaitForSeconds(testRandomTime);
-                Debug.Log("time passed");
             }
             else if (!_notInteracted)
             {

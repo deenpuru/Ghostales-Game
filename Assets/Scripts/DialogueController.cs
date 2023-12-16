@@ -6,21 +6,43 @@ using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
+    
+    [SerializeField] private GameObject _dialogueContainer;
 
-    [SerializeField] private TextMeshProUGUI DialogueText;
-    [SerializeField] private string[] Sentences;
-    [SerializeField] private float DialogueSpeed;
-    [SerializeField] private Image PortraitImageDisplayArea;
+    [Space(10)]
+    [Header("Dialogue Texts")]
+    [Space (5)]
+
+    [SerializeField] private TextMeshProUGUI _dialogueText;
+    [SerializeField] private string[] _sentences;
+    [SerializeField] private float _dialogueSpeed;
+
+    [Space(10)]
+    [Header("Character's Name")]
+    [Space(5)]
+
+    [SerializeField] private TextMeshProUGUI _characterNameText;
+    [SerializeField] private string _characterName;
+
+    [Space(10)]
+    [Header("Character's Image")]
+    [Space(5)]
+
+    [SerializeField] private Image _portraitImageDisplayArea;
     [SerializeField] private Sprite _portraitSprite;
-    [SerializeField] private GameObject dialogueContainer;
     [SerializeField] private GameObject _spriteIndicator;
-    [SerializeField] private PunkKid_MainPlayerControls kid;
+
+    [Space(10)]
+    [Header("Player's Reference")]
+    [Space(5)]
+
+    [SerializeField] private PunkKid_MainPlayerControls _kid;
 
     private int _element = 0;
 
-    private bool canClick = true;
+    private bool _canInteract = true;
     private bool _areaTrigger;
-
+    private bool _cutDialogue = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -46,58 +68,69 @@ public class DialogueController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space)
-            &&
-            canClick == true
-            &&
-            _areaTrigger == true)
-
-        {
-            StopPlayer();
-            PortraitImageDisplayArea.sprite = _portraitSprite;
-            dialogueContainer.SetActive(true);
-            NextSentence();
-        }
+        if (Input.GetKeyUp(KeyCode.Space) && _canInteract == true && _areaTrigger == true)
+            {
+                _cutDialogue = false;
+                StopPlayer();
+                _characterNameText.text = _characterName;
+                _portraitImageDisplayArea.sprite = _portraitSprite;
+                _dialogueContainer.SetActive(true);
+                NextSentence();
+            }
+        if (Input.GetKeyUp(KeyCode.Escape)) 
+            {
+               _cutDialogue = true;
+               EndDialogueText();
+            }
     }
-
+    private void EndDialogueText()
+    {
+        _dialogueText.text = "";
+        _element = 0;
+        _canInteract = true;
+        _dialogueContainer.SetActive(false);
+        _kid.IsAbleToMove = true;
+        
+    }
     private void StopPlayer()
     {
-        kid.IsAbleToMove = false;
-        kid.movement.x = 0;
-        kid.movement.y = 0;
-        kid.animator.SetFloat("Speed", 0);
+        _kid.IsAbleToMove = false;
+        _kid.movement.x = 0;
+        _kid.movement.y = 0;
+        _kid.animator.SetFloat("Speed", 0);
     }
 
     private void NextSentence()
+    {
+        if (_element <= _sentences.Length - 1) 
         {
-            if (_element <= Sentences.Length - 1) 
-            {
-                canClick = false;
-                DialogueText.text = "";
-                StartCoroutine(WriteSentence());
-                
+            _canInteract = false;
+            _dialogueText.text = "";
+            StartCoroutine(WriteSentence());
         }
-            else
-            {
-                DialogueText.text = "";
-                _element = 0;
-                canClick = true;
-                dialogueContainer.SetActive(false);
-                kid.IsAbleToMove = true;
-            }
-           
+        else
+        {
+            EndDialogueText();
         }
+    }
 
 
         private IEnumerator WriteSentence()
         {
-            foreach (char Character in Sentences[_element].ToCharArray())
+            foreach (char Character in _sentences[_element].ToCharArray())
             {
-                DialogueText.text += Character;
-                yield return new WaitForSeconds(DialogueSpeed);
+                _dialogueText.text += Character;
+                 yield return new WaitForSeconds(_dialogueSpeed);
+
+                if (_cutDialogue == true)
+                {
+                    yield break;
+                }
+               
             }
+
             _element++;
-            canClick = true;
+            _canInteract = true;
         }
 
    
