@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class DialogueController : MonoBehaviour
+public class Ping_Pong_Dialogue_Controller : MonoBehaviour
 {
     
     [SerializeField] private GameObject _dialogueContainer;
@@ -31,12 +31,19 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private Image _portraitImageDisplayArea;
     [SerializeField] private Sprite _portraitSprite;
     [SerializeField] private GameObject _spriteIndicator;
+    [SerializeField] private Sprite _playerPortraitSprite;
 
     [Space(10)]
     [Header("Player's Reference")]
     [Space(5)]
 
     [SerializeField] private PunkKid_MainPlayerControls _kid;
+
+    [Space(10)]
+    [Header("Portrait's Display Turn")]
+    [Space(5)]
+
+    [SerializeField] private Sprite[] _spriteTurn;
 
     private int _element = 0;
 
@@ -102,8 +109,10 @@ public class DialogueController : MonoBehaviour
 
     private void NextSentence()
     {
+
         if (_element <= _sentences.Length - 1) 
         {
+            
             Debug.Log(_sentences[_element]);
             _canInteract = false;
             _dialogueText.text = "";
@@ -121,7 +130,7 @@ public class DialogueController : MonoBehaviour
             foreach (char Character in _sentences[_element].ToCharArray())
             {
                 _dialogueText.text += Character;
-                yield return new WaitForSeconds(_dialogueSpeed);
+                 yield return new WaitForSeconds(_dialogueSpeed);
 
                 if (_cutDialogue == true)
                 {
