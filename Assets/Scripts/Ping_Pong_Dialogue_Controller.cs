@@ -23,7 +23,13 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI _characterNameText;
     [SerializeField] private string _characterName;
+    [SerializeField] private string _secondCharacterName;
 
+    [Space(10)]
+    [Header("Second Character's Name")]
+    [Space(5)]
+
+    
     [Space(10)]
     [Header("Character's Image")]
     [Space(5)]
@@ -44,6 +50,9 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
     [Space(5)]
 
     [SerializeField] private Sprite[] _spriteTurn;
+
+    [SerializeField] private string[] _characterNameTurn;
+
 
     private int _element = 0;
 
@@ -79,8 +88,6 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
             {
                 _cutDialogue = false;
                 StopPlayer();
-                _characterNameText.text = _characterName;
-                _portraitImageDisplayArea.sprite = _portraitSprite;
                 _dialogueContainer.SetActive(true);
                 NextSentence();
             }
@@ -109,11 +116,10 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
 
     private void NextSentence()
     {
-
         if (_element <= _sentences.Length - 1) 
         {
-            
-            Debug.Log(_sentences[_element]);
+            _portraitImageDisplayArea.sprite = _spriteTurn[_element];
+            _characterNameText.text = _characterNameTurn[_element];
             _canInteract = false;
             _dialogueText.text = "";
             StartCoroutine(WriteSentence());
