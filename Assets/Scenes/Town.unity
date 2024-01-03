@@ -1062,26 +1062,44 @@ MonoBehaviour:
   _dialogueContainer: {fileID: 521797357}
   _dialogueText: {fileID: 982609059}
   _sentences:
-  - 'Trash can: ...'
-  - 'Trash can: Who''s there?'
-  - 'Kid: hmm..Just a random kid'
-  - 'Kid: Are you okay in there?'
-  - 'Trash can: Yes, i''m fine'
-  - 'Kid: Okay, well goodbye then.'
-  - 'Trash can: Wait!'
-  - 'Trash can: Okay fine, I do need help'
-  - 'Kid: I though so...'
+  - ...
+  - Who's there?
+  - Hmm..Just a random kid
+  - Are you okay in there?
+  - Yes, i'm fine
+  - Okay, well goodbye then.
+  - Wait!
+  - Okay fine, I do need help
+  - I thought so...
   _dialogueSpeed: 0.03
   _characterNameText: {fileID: 2827103760018581935}
   _characterName: Trash Can
+  _secondCharacterName: Punk Kid
   _portraitImageDisplayArea: {fileID: 297518221}
   _portraitSprite: {fileID: 21300000, guid: 1624deabb84e7df4f8b6002f8d4bd283, type: 3}
   _spriteIndicator: {fileID: 1269768695}
   _playerPortraitSprite: {fileID: 21300000, guid: f08825b2cb8fffe48bd4ecda7aefb955, type: 3}
   _kid: {fileID: 1738695639}
   _spriteTurn:
+  - {fileID: 21300000, guid: 6377e75b8efa97f44857c1018cbe3fb5, type: 3}
+  - {fileID: 21300000, guid: 6377e75b8efa97f44857c1018cbe3fb5, type: 3}
   - {fileID: 21300000, guid: f08825b2cb8fffe48bd4ecda7aefb955, type: 3}
-  - {fileID: 21300000, guid: 1624deabb84e7df4f8b6002f8d4bd283, type: 3}
+  - {fileID: 21300000, guid: f08825b2cb8fffe48bd4ecda7aefb955, type: 3}
+  - {fileID: 21300000, guid: 6377e75b8efa97f44857c1018cbe3fb5, type: 3}
+  - {fileID: 21300000, guid: f08825b2cb8fffe48bd4ecda7aefb955, type: 3}
+  - {fileID: 21300000, guid: 6377e75b8efa97f44857c1018cbe3fb5, type: 3}
+  - {fileID: 21300000, guid: 6377e75b8efa97f44857c1018cbe3fb5, type: 3}
+  - {fileID: 21300000, guid: f08825b2cb8fffe48bd4ecda7aefb955, type: 3}
+  _characterNameTurn:
+  - Trash Can
+  - Trash Can
+  - Punk Kid
+  - Punk Kid
+  - Trash Can
+  - Punk Kid
+  - Trash Can
+  - Trash Can
+  - Punk Kid
 --- !u!61 &725863229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3623,7 +3641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5268892287711999555, guid: d129bf4248e8918498d3ba0bcd52f04e, type: 3}
       propertyPath: orthographic size
-      value: 0.96164775
+      value: 0.84517044
       objectReference: {fileID: 0}
     - target: {fileID: 6154455526323497251, guid: d129bf4248e8918498d3ba0bcd52f04e, type: 3}
       propertyPath: IsAbleToMove
@@ -5190,7 +5208,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 25.1
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5226,7 +5244,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 10, y: 14.827791, z: 10, w: 10}
+  m_margin: {x: 17, y: 15, z: 17, w: 10}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
