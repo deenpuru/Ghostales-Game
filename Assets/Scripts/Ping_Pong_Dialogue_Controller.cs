@@ -22,37 +22,21 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
     [Space(5)]
 
     [SerializeField] private TextMeshProUGUI _characterNameText;
-    [SerializeField] private string _characterName;
-    [SerializeField] private string _secondCharacterName;
+    [SerializeField] private string[] _characterNameTurn;
 
-    [Space(10)]
-    [Header("Second Character's Name")]
-    [Space(5)]
-
-    
     [Space(10)]
     [Header("Character's Image")]
     [Space(5)]
 
     [SerializeField] private Image _portraitImageDisplayArea;
-    [SerializeField] private Sprite _portraitSprite;
-    [SerializeField] private GameObject _spriteIndicator;
-    [SerializeField] private Sprite _playerPortraitSprite;
+    [SerializeField] private Sprite[] _spriteTurn;
+    [SerializeField] private Animator _indicatorAnimation;
 
     [Space(10)]
     [Header("Player's Reference")]
     [Space(5)]
 
     [SerializeField] private PunkKid_MainPlayerControls _kid;
-
-    [Space(10)]
-    [Header("Portrait's Display Turn")]
-    [Space(5)]
-
-    [SerializeField] private Sprite[] _spriteTurn;
-
-    [SerializeField] private string[] _characterNameTurn;
-
 
     private int _element = 0;
 
@@ -65,7 +49,7 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("PunkKid_Tag"))
         {
             _areaTrigger = true;
-            _spriteIndicator.SetActive(true);
+            _indicatorAnimation.SetBool("Hide", false);
         }
 
     }
@@ -75,7 +59,7 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("PunkKid_Tag"))
         {
             _areaTrigger = false;
-            _spriteIndicator.SetActive(false);
+            _indicatorAnimation.SetBool("Hide", true);
         }
     }
 
@@ -89,7 +73,7 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
             _cutDialogue = false;
             StopPlayer();
             _dialogueContainer.SetActive(true);
-            _spriteIndicator.SetActive(false);
+            _indicatorAnimation.SetBool("Hide", true);
             NextSentence();
         }
         if (Input.GetKeyUp(KeyCode.Escape)) 
@@ -100,6 +84,7 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
     }
     private void EndDialogueText()
     {
+        _indicatorAnimation.SetBool("Hide", false);
         _dialogueText.text = "";
         _element = 0;
         _canInteract = true;

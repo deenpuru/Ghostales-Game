@@ -30,7 +30,6 @@ public class DialogueController : MonoBehaviour
 
     [SerializeField] private Image _portraitImageDisplayArea;
     [SerializeField] private Sprite _portraitSprite;
-    [SerializeField] private GameObject _spriteIndicator;
     [SerializeField] private Animator _indicatorAnimation;
 
     [Space(10)]
@@ -52,7 +51,6 @@ public class DialogueController : MonoBehaviour
         if (collision.gameObject.CompareTag("PunkKid_Tag"))
         {
             _indicatorAnimation.SetBool("Hide", false);
-            _spriteIndicator.SetActive(true);
             _areaTrigger = true;
         }
 
@@ -64,7 +62,6 @@ public class DialogueController : MonoBehaviour
         {
             _indicatorAnimation.SetBool("Hide", true);
             _areaTrigger = false;
-            //_spriteIndicator.SetActive(false);
         }
     }
 
@@ -79,7 +76,6 @@ public class DialogueController : MonoBehaviour
                 StopPlayer();
                 _characterNameText.text = _characterName;
                 _portraitImageDisplayArea.sprite = _portraitSprite;
-                //_spriteIndicator.SetActive(false);
                 _indicatorAnimation.SetBool("Hide", true);
                 _dialogueContainer.SetActive(true);
                 NextSentence();
@@ -93,7 +89,6 @@ public class DialogueController : MonoBehaviour
     private void EndDialogueText()
     {
         _indicatorAnimation.SetBool("Hide", false);
-        _spriteIndicator.SetActive(true);
         _dialogueText.text = "";
         _element = 0;
         _canInteract = true;
