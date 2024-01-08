@@ -85,17 +85,18 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Space) && _canInteract == true && _areaTrigger == true)
-            {
-                _cutDialogue = false;
-                StopPlayer();
-                _dialogueContainer.SetActive(true);
-                NextSentence();
-            }
+        {
+            _cutDialogue = false;
+            StopPlayer();
+            _dialogueContainer.SetActive(true);
+            _spriteIndicator.SetActive(false);
+            NextSentence();
+        }
         if (Input.GetKeyUp(KeyCode.Escape)) 
-            {
-               _cutDialogue = true;
-               EndDialogueText();
-            }
+        {
+            _cutDialogue = true;
+            EndDialogueText();
+        }
     }
     private void EndDialogueText()
     {

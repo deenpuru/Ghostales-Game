@@ -31,12 +31,15 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private Image _portraitImageDisplayArea;
     [SerializeField] private Sprite _portraitSprite;
     [SerializeField] private GameObject _spriteIndicator;
+    [SerializeField] private Animator _indicatorAnimation;
 
     [Space(10)]
     [Header("Player's Reference")]
     [Space(5)]
 
     [SerializeField] private PunkKid_MainPlayerControls _kid;
+
+    
 
     private int _element = 0;
 
@@ -48,8 +51,9 @@ public class DialogueController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PunkKid_Tag"))
         {
-            _areaTrigger = true;
+            _indicatorAnimation.SetBool("Hide", false);
             _spriteIndicator.SetActive(true);
+            _areaTrigger = true;
         }
 
     }
@@ -58,8 +62,9 @@ public class DialogueController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PunkKid_Tag"))
         {
+            _indicatorAnimation.SetBool("Hide", true);
             _areaTrigger = false;
-            _spriteIndicator.SetActive(false);
+            //_spriteIndicator.SetActive(false);
         }
     }
 
@@ -74,17 +79,21 @@ public class DialogueController : MonoBehaviour
                 StopPlayer();
                 _characterNameText.text = _characterName;
                 _portraitImageDisplayArea.sprite = _portraitSprite;
+                //_spriteIndicator.SetActive(false);
+                _indicatorAnimation.SetBool("Hide", true);
                 _dialogueContainer.SetActive(true);
                 NextSentence();
             }
-        if (Input.GetKeyUp(KeyCode.Escape)) 
+        if (Input.GetKeyUp(KeyCode.Escape) && _areaTrigger == true) 
             {
-               _cutDialogue = true;
-               EndDialogueText();
+                _cutDialogue = true;
+                EndDialogueText();
             }
     }
     private void EndDialogueText()
     {
+        _indicatorAnimation.SetBool("Hide", false);
+        _spriteIndicator.SetActive(true);
         _dialogueText.text = "";
         _element = 0;
         _canInteract = true;
@@ -104,7 +113,6 @@ public class DialogueController : MonoBehaviour
     {
         if (_element <= _sentences.Length - 1) 
         {
-            Debug.Log(_sentences[_element]);
             _canInteract = false;
             _dialogueText.text = "";
             StartCoroutine(WriteSentence());
@@ -121,7 +129,7 @@ public class DialogueController : MonoBehaviour
             foreach (char Character in _sentences[_element].ToCharArray())
             {
                 _dialogueText.text += Character;
-                yield return new WaitForSeconds(_dialogueSpeed);
+                 yield return new WaitForSeconds(_dialogueSpeed);
 
                 if (_cutDialogue == true)
                 {
