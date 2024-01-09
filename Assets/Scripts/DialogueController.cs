@@ -9,32 +9,37 @@ public class DialogueController : MonoBehaviour
     
     [SerializeField] private GameObject _dialogueContainer;
 
-    [Space(10)]
-    [Header("Dialogue Texts")]
-    [Space (5)]
+    [Space(20)]
+    [Header("-------------------Dialogue Texts-------------------")]
+    [Space (20)]
 
     [SerializeField] private TextMeshProUGUI _dialogueText;
     [SerializeField] private string[] _sentences;
     [SerializeField] private float _dialogueSpeed;
 
-    [Space(10)]
-    [Header("Character's Name")]
-    [Space(5)]
+    [Space(20)]
+    [Header("-------------------Character's Name-------------------")]
+    [Space(20)]
 
     [SerializeField] private TextMeshProUGUI _characterNameText;
     [SerializeField] private string _characterName;
 
-    [Space(10)]
-    [Header("Character's Image")]
-    [Space(5)]
+    [Space(20)]
+    [Header("-------------------Character's Image-------------------")]
+    [Space(20)]
 
     [SerializeField] private Image _portraitImageDisplayArea;
     [SerializeField] private Sprite _portraitSprite;
+
+    [Space(20)]
+    [Header("-------------------Character's Animation-------------------")]
+    [Space(20)]
+
     [SerializeField] private Animator _indicatorAnimation;
 
-    [Space(10)]
-    [Header("Player's Reference")]
-    [Space(5)]
+    [Space(20)]
+    [Header("-------------------Player's Reference-------------------")]
+    [Space(20)]
 
     [SerializeField] private PunkKid_MainPlayerControls _kid;
 
@@ -45,6 +50,10 @@ public class DialogueController : MonoBehaviour
     private bool _canInteract = true;
     private bool _areaTrigger;
     private bool _cutDialogue = false;
+
+    /**************************************************************************/
+
+    // Character behavior when entering trigger area
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -65,7 +74,9 @@ public class DialogueController : MonoBehaviour
         }
     }
 
-    
+    /**************************************************************************/
+
+    //  Multiple characters dialogue system behavior
 
     // Update is called once per frame
     void Update()

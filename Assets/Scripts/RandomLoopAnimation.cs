@@ -10,6 +10,14 @@ public class RandomLoopAnimation : MonoBehaviour
     [SerializeField] private int _maxRange;
     [SerializeField] private string _animationTrigger;
 
+    [Space(20)]
+    [Header("-------------------Character's Animation-------------------")]
+    [Space(20)]
+
+    [SerializeField] private Animator _trashCanWhileInteracting;
+
+    //Trash can NPC loop animation
+
     private void Start()
     {
         StartCoroutine(LoopAnimation());
@@ -27,7 +35,8 @@ public class RandomLoopAnimation : MonoBehaviour
             }
             else if (!_notInteracted)
             {
-                yield return null;
+                _trashCanWhileInteracting.SetTrigger("isBlinking");
+                //yield return null;
             }
            
         }
