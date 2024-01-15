@@ -43,6 +43,8 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
 
     [SerializeField] private PunkKid_MainPlayerControls _kid;
 
+    public bool _checkDialogueON;
+
     private int _element = 0;
 
     private bool _canInteract = true;
@@ -82,6 +84,7 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Space) && _canInteract == true && _areaTrigger == true)
         {
+            _checkDialogueON = true;
             _cutDialogue = false;
             StopPlayer();
             _dialogueContainer.SetActive(true);
@@ -96,6 +99,7 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
     }
     private void EndDialogueText()
     {
+        _checkDialogueON = false;
         _indicatorAnimation.SetBool("Hide", false);
         _dialogueText.text = "";
         _element = 0;
