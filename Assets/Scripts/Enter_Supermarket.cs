@@ -43,5 +43,4 @@ public class Enter_Supermarket : MonoBehaviour
             _supermarketAnimation.SetTrigger("Door_Closes");
         }
     }
-
 }
