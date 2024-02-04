@@ -22,7 +22,7 @@ public class PunkKid_MainPlayerControls : MonoBehaviour
             movement.y = Input.GetAxisRaw("Vertical");
 
             movement = new Vector3 (movement.x,movement.y,0);
-            movement.Normalize();
+            movement.Normalize(); // Fixes the diagonal speed ratio
 
 
             animator.SetFloat("Horizonal", movement.x);

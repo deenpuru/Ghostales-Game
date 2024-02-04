@@ -24,9 +24,7 @@ public class TrafficLight_Light_Loop : MonoBehaviour
             _yellowLight.enabled = false;
             _blueLight.enabled = false;
             _redLight.enabled = true;
-            Debug.Log("on");
             yield return new WaitForSeconds(4);
-            Debug.Log("off");
             _redLight.enabled = false;
 
             _yellowLight.enabled = true;

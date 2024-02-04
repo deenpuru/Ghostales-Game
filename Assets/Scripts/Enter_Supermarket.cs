@@ -7,17 +7,15 @@ public class Enter_Supermarket : MonoBehaviour
     [SerializeField] private PunkKid_MainPlayerControls kid;
 
     [SerializeField] private Animator _supermarketAnimation;
-
+    public Transform _pointToGo;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("PunkKid_Tag"))
         {
             _supermarketAnimation.SetTrigger("Door_Opens");
-
             StartCoroutine(WalkInside());
         }
-
     }
 
     IEnumerator WalkInside()
@@ -32,7 +30,8 @@ public class Enter_Supermarket : MonoBehaviour
         kid.movement.y = 1;
         kid.animator.SetFloat("Vertical", kid.movement.y);
         kid.animator.SetFloat("Speed", 1);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
+        kid.transform.position = _pointToGo.position;
         kid.IsAbleToMove = true;
     }
 
