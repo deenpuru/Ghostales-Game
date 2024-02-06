@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enter_Supermarket : MonoBehaviour
 {
-    [SerializeField] private PunkKid_MainPlayerControls kid;
+    [SerializeField] private PunkKid_MainPlayerControls _kid;
 
     [SerializeField] private Animator _supermarketAnimation;
     public Transform _pointToGo;
@@ -20,19 +20,19 @@ public class Enter_Supermarket : MonoBehaviour
 
     IEnumerator WalkInside()
     {
-        kid.IsAbleToMove = false;
-        kid.movement.x = 0;
-        kid.movement.y = 0;
-        kid.animator.SetFloat("Speed", 0);
+        _kid.IsAbleToMove = false;
+        _kid.movement.x = 0;
+        _kid.movement.y = 0;
+        _kid.animator.SetFloat("Speed", 0);
         yield return new WaitForSeconds(1.5f);
 
-        kid.movement.x = 0;
-        kid.movement.y = 1;
-        kid.animator.SetFloat("Vertical", kid.movement.y);
-        kid.animator.SetFloat("Speed", 1);
+        _kid.movement.x = 0;
+        _kid.movement.y = 1;
+        _kid.animator.SetFloat("Vertical", _kid.movement.y);
+        _kid.animator.SetFloat("Speed", 1);
         yield return new WaitForSeconds(1f);
-        kid.transform.position = _pointToGo.position;
-        kid.IsAbleToMove = true;
+        _kid.transform.position = _pointToGo.position;
+        _kid.IsAbleToMove = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)

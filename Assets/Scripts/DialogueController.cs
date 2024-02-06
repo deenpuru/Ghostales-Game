@@ -81,8 +81,8 @@ public class DialogueController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space) && _canInteract == true && _areaTrigger == true)
-            {
+        if (Input.GetKeyUp(KeyCode.Space) && _canInteract == true && _areaTrigger == true || gameObject.CompareTag("PunkKid_Tag") && _canInteract && _areaTrigger == true)
+        {
                 _cutDialogue = false;
                 StopPlayer();
                 _characterNameText.text = _characterName;
