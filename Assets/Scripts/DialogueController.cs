@@ -81,7 +81,7 @@ public class DialogueController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space) && _canInteract == true && _areaTrigger == true || gameObject.CompareTag("PunkKid_Tag") && _canInteract && _areaTrigger == true)
+        if (Input.GetKeyUp(KeyCode.Space) && _canInteract == true && _areaTrigger == true)
         {
                 _cutDialogue = false;
                 StopPlayer();
@@ -91,6 +91,7 @@ public class DialogueController : MonoBehaviour
                 _dialogueContainer.SetActive(true);
                 NextSentence();
             }
+
         if (Input.GetKeyUp(KeyCode.Escape) && _areaTrigger == true) 
             {
                 _cutDialogue = true;

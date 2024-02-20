@@ -24,18 +24,6 @@ public class Screen_Transition : MonoBehaviour
             _isPlayingShow = true;
             _playableDirector.playableAsset = _hide;
             _playableDirector.Play();
-        }
-        
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }   
     }
 }

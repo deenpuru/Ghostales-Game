@@ -40,21 +40,16 @@ public class Enter_Supermarket : MonoBehaviour
         _kid.animator.SetFloat("Vertical", _kid.movement.y);
         _kid.animator.SetFloat("Speed", 1);
 
-        
         _playableDirector.playableAsset = _hide;
         _playableDirector.Play();
 
         yield return new WaitForSeconds((float)_hide.duration + _animDelay );
-
-        
 
         _kid.transform.position = _pointToGo.position;
         _kid.IsAbleToMove = true;
 
         _playableDirector.playableAsset = _show;
         _playableDirector.Play();
-
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)

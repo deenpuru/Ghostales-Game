@@ -146,9 +146,7 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
                 }
                
             }
-
             _element++;
             _canInteract = true;
         }
-
 }
