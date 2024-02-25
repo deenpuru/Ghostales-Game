@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class Enter_Supermarket : MonoBehaviour
+public class TeleportSystem : MonoBehaviour
 {
     [SerializeField] private PunkKid_MainPlayerControls _kid;
 
-    [SerializeField] private Animator _supermarketAnimation;
+    [SerializeField] private Animator _doorAnimator;
 
     [SerializeField] private PlayableDirector _playableDirector;
     [SerializeField] private PlayableAsset _show;
@@ -16,13 +16,23 @@ public class Enter_Supermarket : MonoBehaviour
     [SerializeField] private GameObject _transition_Container;
 
     [SerializeField] private float _animDelay = 3;
+
+    [SerializeField] private bool _walkUp;
+
+    [SerializeField] private float _gizmosSize = 1;
+    [SerializeField] private Vector3 _offsetPosition;
+    [SerializeField] private Color _gizmosColor;
+
     public Transform _pointToGo;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("PunkKid_Tag"))
         {
-            _supermarketAnimation.SetTrigger("Door_Opens");
+           if (_doorAnimator != null)
+            {
+                _doorAnimator.SetTrigger("Door_Opens");
+            }
             StartCoroutine(WalkInside());
         }
     }
@@ -34,9 +44,17 @@ public class Enter_Supermarket : MonoBehaviour
         _kid.movement.y = 0;
         _kid.animator.SetFloat("Speed", 0);
         yield return new WaitForSeconds(1.5f);
-
         _kid.movement.x = 0;
-        _kid.movement.y = 1;
+
+        if (_walkUp)
+        {
+            _kid.movement.y = 1;
+        }
+        else
+        {
+            _kid.movement.y = -1;
+        }
+        
         _kid.animator.SetFloat("Vertical", _kid.movement.y);
         _kid.animator.SetFloat("Speed", 1);
 
@@ -45,7 +63,7 @@ public class Enter_Supermarket : MonoBehaviour
 
         yield return new WaitForSeconds((float)_hide.duration + _animDelay );
 
-        _kid.transform.position = _pointToGo.position;
+        _kid.transform.position = new Vector3(_pointToGo.position.x + _offsetPosition.x, _pointToGo.position.y + _offsetPosition.y, _pointToGo.position.z + _offsetPosition.z);
         _kid.IsAbleToMove = true;
 
         _playableDirector.playableAsset = _show;
@@ -56,7 +74,16 @@ public class Enter_Supermarket : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PunkKid_Tag"))
         {
-            _supermarketAnimation.SetTrigger("Door_Closes");
+            if (_doorAnimator != null)
+            {
+                _doorAnimator.SetTrigger("Door_Closes");
+            }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = _gizmosColor;
+        Gizmos.DrawSphere(new Vector3(_pointToGo.position.x + _offsetPosition.x, _pointToGo.position.y + _offsetPosition.y, _pointToGo.position.z + _offsetPosition.z), _gizmosSize);
     }
 }

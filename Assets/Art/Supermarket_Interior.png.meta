@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7ad4d41abfce21f48a2d2d3702dde1b4
+guid: 79f80cd0532516846b515d4c326a8486
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -123,253 +123,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PunkKid_WalkingAnimation_0
+      name: Supermarket_Interior_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 10
+        x: 32
+        y: 132
+        width: 79
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5144845, y: 0.19485894}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c09f91794ebb504c825d2d304a9f6b7
+      internalID: -677896879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Supermarket_Interior_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 63
+        width: 134
+        height: 69
+      alignment: 9
+      pivot: {x: 0.49999994, y: 0.15174125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d4f02eb5ceae74293b92c0514636fa
+      internalID: -650352784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Supermarket_Interior_2
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 104
+        width: 82
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1956836}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427f371a09c68a44e8c3a0cb4a2f55bf
+      internalID: 1234327574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Supermarket_Interior_3
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 63
+        width: 82
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.15775554}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7338b22f415a940bd3cbb5c39beb3e
+      internalID: 975683486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Supermarket_Interior_4
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 63
+        width: 46
+        height: 92
+      alignment: 9
+      pivot: {x: 0.495839, y: 0.14003803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848b7f7231040204c9571487f4e07be4
+      internalID: -327515960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Supermarket_Interior_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 43
         width: 19
-        height: 25
+        height: 16
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.49345216, y: 0.2200706}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0263b63f14741c644bab615c8001c5ed
-      internalID: 1322795021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PunkKid_WalkingAnimation_1
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 10
-        width: 19
-        height: 25
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59feb83a4b29db443af1626edef52653
-      internalID: 1649619383
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PunkKid_WalkingAnimation_2
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 11
-        width: 19
-        height: 24
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5ccff3f1d65d164eae92deea2401ea9
-      internalID: -621614175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PunkKid_WalkingAnimation_3
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 11
-        width: 19
-        height: 24
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c7e6913f7556854394eeb46d4d2f434
-      internalID: -54494896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PunkKid_WalkingAnimation_4
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 9
-        width: 19
-        height: 25
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d91c2c6f24259a459235c011d70972b
-      internalID: 992875674
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PunkKid_WalkingAnimation_5
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 9
-        width: 19
-        height: 25
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8486553550e6fc7478e5707ef82975ea
-      internalID: 354210041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PunkKid_WalkingAnimation_6
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 12
-        width: 20
-        height: 23
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc7ef5dc89855644999158611d998e27
-      internalID: -2140834337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PunkKid_WalkingAnimation_7
-      rect:
-        serializedVersion: 2
-        x: 232
-        y: 12
-        width: 20
-        height: 22
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3995a438826aed64bba440c91f8a7e9b
-      internalID: 2089798329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PunkKid_WalkingAnimation_8
-      rect:
-        serializedVersion: 2
-        x: 264
-        y: 12
-        width: 20
-        height: 22
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d831e8c6ac2c8324ca6d886621d3c946
-      internalID: 816377277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PunkKid_WalkingAnimation_9
-      rect:
-        serializedVersion: 2
-        x: 296
-        y: 12
-        width: 20
-        height: 23
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e51a8e4269f3f9442a8a298ea4257d6b
-      internalID: -237464768
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PunkKid_WalkingAnimation_10
-      rect:
-        serializedVersion: 2
-        x: 328
-        y: 13
-        width: 20
-        height: 22
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36748b98959d86146912caba80b334ed
-      internalID: -2065450600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PunkKid_WalkingAnimation_11
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 12
-        width: 20
-        height: 22
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67b7d95acb2adb648b9eee45bc8f14f2
-      internalID: -797323599
+      spriteID: 3f194a379c06f45429645110f7a88505
+      internalID: 637038203
       vertices: []
       indices: 
       edges: []
@@ -385,18 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PunkKid_WalkingAnimation_0: 1322795021
-      PunkKid_WalkingAnimation_1: 1649619383
-      PunkKid_WalkingAnimation_10: -2065450600
-      PunkKid_WalkingAnimation_11: -797323599
-      PunkKid_WalkingAnimation_2: -621614175
-      PunkKid_WalkingAnimation_3: -54494896
-      PunkKid_WalkingAnimation_4: 992875674
-      PunkKid_WalkingAnimation_5: 354210041
-      PunkKid_WalkingAnimation_6: -2140834337
-      PunkKid_WalkingAnimation_7: 2089798329
-      PunkKid_WalkingAnimation_8: 816377277
-      PunkKid_WalkingAnimation_9: -237464768
+      Supermarket_Interior_0: -677896879
+      Supermarket_Interior_1: -650352784
+      Supermarket_Interior_2: 1234327574
+      Supermarket_Interior_3: 975683486
+      Supermarket_Interior_4: -327515960
+      Supermarket_Interior_5: 637038203
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
