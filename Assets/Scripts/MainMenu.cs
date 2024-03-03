@@ -63,7 +63,7 @@ public class MainMenu : MonoBehaviour
             MovePointer();
             _currentButton.color = _normalColor;
             _currentButton = _buttons[_element];
-            _currentButton.color = _hoverColor;
+            _currentButton.color = _hoverColor;                              
         }
     }
 
