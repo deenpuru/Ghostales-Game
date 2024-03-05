@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         _pointerPosition.transform.localPosition = _firstButton;
-        _currentButton = _buttons[_element]; 
+        _currentButton = _buttons[_element];
         _currentButton.color = _hoverColor;
     }
 
@@ -50,7 +50,7 @@ public class MainMenu : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
-        {   
+        {
 
             if (_element > 0)
             {
@@ -63,7 +63,7 @@ public class MainMenu : MonoBehaviour
             MovePointer();
             _currentButton.color = _normalColor;
             _currentButton = _buttons[_element];
-            _currentButton.color = _hoverColor;                              
+            _currentButton.color = _hoverColor;
         }
     }
 
