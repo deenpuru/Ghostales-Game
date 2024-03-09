@@ -32,6 +32,8 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
+       
+
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
 
@@ -65,7 +67,27 @@ public class MainMenu : MonoBehaviour
             _currentButton = _buttons[_element];
             _currentButton.color = _hoverColor;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+        {
+            if (_pointerPosition.transform.localPosition == _firstButton)
+            {
+                SceneManager.LoadScene("Town");
+            }
+
+            if (_pointerPosition.transform.localPosition == _secondButton)
+            {
+                Debug.Log("no options for now");
+            }
+
+            if (_pointerPosition.transform.localPosition == _thirdButton)
+            {
+                Application.Quit();
+                Debug.Log("Quit Game");
+            }
+        }
     }
+
 
     private void MovePointer()
     {
@@ -90,12 +112,11 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
-        SceneManager.LoadScene("Town");
+        
     }
 
     public void QuitButton()
     {
-        Application.Quit();
-        Debug.Log("Quit Game");
+        
     }
 }
