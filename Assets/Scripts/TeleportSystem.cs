@@ -79,16 +79,16 @@ public class TeleportSystem : MonoBehaviour
         _playableDirector.playableAsset = _hide;
         _playableDirector.Play();
 
-        yield return new WaitForSeconds((float)_hide.duration + _animDelay );
+        yield return new WaitForSeconds((float)_hide.duration + _animDelay);
 
-        //TO DO: turn off the cinemachine confiner 2D component
+        //turns off the cinemachine confiner 2D component
 
         _confiner2D.m_BoundingShape2D = _MapBounding;
 
         _kid.transform.position = new Vector3(_pointToGo.position.x + _offsetPosition.x, _pointToGo.position.y + _offsetPosition.y, _pointToGo.position.z + _offsetPosition.z);
         _kid.IsAbleToMove = true;
 
-        //TO DO: turn on the cinemachine confiner 2D component
+        //turns on the cinemachine confiner 2D component
         yield return new WaitForSeconds(0.2f);
 
         _playableDirector.playableAsset = _show;
