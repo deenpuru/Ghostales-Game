@@ -133,20 +133,20 @@ public class Ping_Pong_Dialogue_Controller : MonoBehaviour
     }
 
 
-        private IEnumerator WriteSentence()
+    private IEnumerator WriteSentence()
+    {
+        foreach (char Character in _sentences[_element].ToCharArray())
         {
-            foreach (char Character in _sentences[_element].ToCharArray())
-            {
-                _dialogueText.text += Character;
-                 yield return new WaitForSeconds(_dialogueSpeed);
+            _dialogueText.text += Character;
+            yield return new WaitForSeconds(_dialogueSpeed);
 
-                if (_cutDialogue == true)
-                {
-                    yield break;
-                }
-               
+            if (_cutDialogue == true)
+            {
+                yield break;
             }
+               
+        }
             _element++;
             _canInteract = true;
-        }
+    }
 }
