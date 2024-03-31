@@ -11,6 +11,7 @@ public class StoryDialogue : MonoBehaviour
     [SerializeField] private GameObject _dialogueContrainer;
     [SerializeField] private TextMeshProUGUI _dialogueText;
     [SerializeField] private string[] _dialogueSentences;
+    [SerializeField] private string[] _dialogueSentencesPhase02;
     [SerializeField] private float _delayUntilDialogueShows;
 
     private int _element = 0;
@@ -57,6 +58,18 @@ public class StoryDialogue : MonoBehaviour
         _dialogueContrainer.SetActive(true);
         yield return new WaitForSeconds(0.2f);
 
+        if (_element <= _dialogueSentencesPhase02.Length - 1)
+        {
+            _canInteract = false;
+            _dialogueText.text = "";
+            StartCoroutine(WriteSentencePhase02());
+        }
+        else
+        {
+            _dialogueContrainer.SetActive(false);
+            //StartCoroutine(SecondPhase());
+        }
+       
     }
 
     private void NextSentence()
@@ -78,6 +91,17 @@ public class StoryDialogue : MonoBehaviour
     private IEnumerator WriteSentence()
     {
         foreach (char Character in _dialogueSentences[_element].ToCharArray())
+        {
+            _dialogueText.text += Character;
+            yield return new WaitForSeconds(_dialogueSpeed);
+        }
+        _element++;
+        _canInteract = true;
+    }
+
+    private IEnumerator WriteSentencePhase02()
+    {
+        foreach (char Character in _dialogueSentencesPhase02[_element].ToCharArray())
         {
             _dialogueText.text += Character;
             yield return new WaitForSeconds(_dialogueSpeed);

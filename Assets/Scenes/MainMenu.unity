@@ -1613,7 +1613,7 @@ PlayableDirector:
   m_GameObject: {fileID: 857573933}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 2eff0bb1ce9273747843cf6b4849c596, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: f7c5deb83b9c7da4ba617f7034f56e51, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -1656,6 +1656,15 @@ MonoBehaviour:
   - '* Finally, time to head home'
   - '* What a long day'
   - '* I''m exhausted'
+  _dialogueSentencesPhase02:
+  - Ahh.. lights out..
+  - That's pretty nice...
+  - Actually....
+  - Maybe too nice
+  - I think I'm getting a little sleepy here
+  - Okay... Maybe just a...
+  - Just a tiny little nap...
+  - Just for a few minutes..
   _delayUntilDialogueShows: 0
   _timelinePart01: {fileID: 11400000, guid: 2eff0bb1ce9273747843cf6b4849c596, type: 2}
   _timelinePart02: {fileID: 11400000, guid: f7c5deb83b9c7da4ba617f7034f56e51, type: 2}
