@@ -3,45 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player3D_Movement : MonoBehaviour
-{
-    [SerializeField] private float _moveSpeed = 10f;
-    [SerializeField] private float _rotationSpeed;
+{ 
+    [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] private float _rotateSpeed = 10f;
+    [SerializeField] private Animator _animator;
+    private Vector3 _moveDirection;
 
-    private Rigidbody rb;
-    private Vector3 movement;
-
-
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.z = Input.GetAxisRaw("Vertical");
+        Vector2 _movement = new Vector2(0, 0);
 
-            movement = new Vector3(movement.x, 0, movement.z);
-            movement.Normalize(); // Fixes the diagonal speed ratio
 
-            transform.Translate(movement * _moveSpeed * Time.deltaTime,Space.World);
-
-            if (movement != Vector3.zero)
+            if (Input.GetKey(KeyCode.UpArrow))
             {
-                Quaternion toRotation = Quaternion.LookRotation(movement, Vector3.up);
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, _rotationSpeed * Time.deltaTime);
+                _movement.y = -1;
             }
 
-            /* animator.SetFloat("Horizonal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
-            animator.SetFloat("Speed", movement.sqrMagnitude); 
-
-            if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Vertical") == -1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1)
+            if (Input.GetKey(KeyCode.DownArrow))
             {
-                animator.SetFloat("LastHorizontal", Input.GetAxisRaw("Horizontal"));
-                animator.SetFloat("LastVertical", Input.GetAxisRaw("Vertical")); 
-            } */
-    }
+                _movement.y = +1;
+            }
 
-    void FixedUpdate()
-    {
-       // rb.MovePosition(rb.position + movement * _moveSpeed * Time.fixedDeltaTime);
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                _movement.x = +1;
+            }
+
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                _movement.x = -1;
+            }
+
+            _movement = _movement.normalized;
+
+        if (_movement != Vector2.zero) 
+        {
+            _moveDirection = new Vector3(_movement.x, 0f, _movement.y);
+            _animator.SetBool("isWalking", true);
+            transform.position += _moveDirection * _moveSpeed * Time.deltaTime;
+            transform.forward = Vector3.Slerp(transform.forward, _moveDirection, Time.deltaTime * _rotateSpeed);
+        }
+
+        else
+        {
+            _animator.SetBool("isWalking", false);
+        }
     }
 }
+

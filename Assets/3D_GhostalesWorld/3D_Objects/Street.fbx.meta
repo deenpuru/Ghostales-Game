@@ -17,8 +17,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 9e24e7eb39d4a224f8b8d51f17e3dd45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: deeeae0916b3f3e498efbcd237ecf7b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Palette_Mat
+    second: {fileID: 2100000, guid: 01568a1855b346c4aaa8e0f0461072e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sidewalk_Mat
+    second: {fileID: 2100000, guid: b1b416f41e372414d877a173c9815ffb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Stroke
-    second: {fileID: 2100000, guid: b30df57a9c464754f860a6f978590523, type: 2}
+    second: {fileID: 2100000, guid: 26de9805839c793449780719bb4d1ba7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Supermatket_UV
+    second: {fileID: 2100000, guid: 278475e340f812849a4293dba5fcae64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tree_Mat
+    second: {fileID: 2100000, guid: d9462fd477e35f4419976d2c33991cf6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -105,7 +135,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.01
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
