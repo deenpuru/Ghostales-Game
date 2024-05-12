@@ -7,7 +7,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Light Grey
+    second: {fileID: 2100000, guid: 79877a294c2f39f46875a07d42902283, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Lineart
+    second: {fileID: 2100000, guid: b30df57a9c464754f860a6f978590523, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
     second: {fileID: 2100000, guid: b30df57a9c464754f860a6f978590523, type: 2}
   - first:
       type: UnityEngine:Material
