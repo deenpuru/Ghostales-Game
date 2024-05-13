@@ -6,11 +6,11 @@ public class Player3D_Movement : MonoBehaviour
 { 
     [SerializeField] private float _moveSpeed = 5f;
     [SerializeField] private float _rotateSpeed = 10f;
-    [SerializeField] private float _afkTime;
     [SerializeField] private Animator _animator;
     [SerializeField] private int _minRange;
     [SerializeField] private int _maxRange;
     private Vector3 _moveDirection;
+    private bool _isWaiting = true;
 
     private void Update()
     {
@@ -45,24 +45,28 @@ public class Player3D_Movement : MonoBehaviour
             _animator.SetBool("isWalking", true);
             transform.position += _moveDirection * _moveSpeed * Time.deltaTime;
             transform.forward = Vector3.Slerp(transform.forward, _moveDirection, Time.deltaTime * _rotateSpeed);
-            //AFK_Animation();
         }
 
         else
         {
             _animator.SetBool("isWalking", false);
+            StartCoroutine(Waiting_Anim());
         }
-        /*
-        IEnumerator AFK_Animation()
+        
+        IEnumerator Waiting_Anim()
         {
-            while (_movement != Vector2.zero)
+            if (_movement == Vector2.zero && _isWaiting)
             {
-                int testRandomTime = Random.Range(_minRange, _maxRange);
-                GetComponent<Animator>().SetTrigger(_defaultAnimationTrigger);
-                yield return new WaitForSeconds(testRandomTime);
+                yield return new WaitForSeconds(Random.Range(_minRange, _maxRange));
+                _animator.SetBool("isWaiting", true);
+            }
+            else
+            {
+                _isWaiting = false;
+                _animator.SetBool("isWaiting", false);
             }
         }
-        */
+        
     }
 }
 
