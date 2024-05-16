@@ -50,9 +50,9 @@ public class Player3D_Movement : MonoBehaviour
         else
         {
             _animator.SetBool("isWalking", false);
-            StartCoroutine(Waiting_Anim());
+            //StartCoroutine(Waiting_Anim());
         }
-        
+        /*
         IEnumerator Waiting_Anim()
         {
             if (_movement == Vector2.zero && _isWaiting)
@@ -66,7 +66,7 @@ public class Player3D_Movement : MonoBehaviour
                 _animator.SetBool("isWaiting", false);
             }
         }
-        
+        */
     }
 }
 
