@@ -17,27 +17,27 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0.0000000040576653, y: 0.00000091260625, z: 0.00045877942, w: 0.9999999}
-        inSlope: {x: 0.0051470054, y: 0.0000023613406, z: -0.0000000048894435, w: 0}
-        outSlope: {x: 0.0051470054, y: 0.0000023613406, z: -0.0000000048894435, w: 0}
+        value: {x: -0.0000000040576653, y: 0.00000091260625, z: 0.00045877945, w: 0.9999999}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0.005166237, y: 0.0000022408076, z: -0.00000024652655, w: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
       - serializedVersion: 3
         time: 0.7083334
-        value: {x: 0.0016543966, y: 0.00000088676177, z: 0.00045877864, w: 0.99999857}
-        inSlope: {x: -0.022794055, y: -0.000012169836, z: 0.000000023748726, w: 0.000039339066}
-        outSlope: {x: -0.022794055, y: -0.000012169836, z: 0.000000023748726, w: 0.000039339066}
+        value: {x: 0.0016543968, y: 0.0000008867617, z: 0.00045877858, w: 0.9999985}
+        inSlope: {x: -0.02274766, y: -0.000012282751, z: -0.00000016435104, w: 0}
+        outSlope: {x: -0.022782944, y: -0.000013053977, z: -0.0000011641532, w: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
       - serializedVersion: 3
         time: 0.8333334
-        value: {x: -0.0000000036321248, y: -0.000000014942822, z: 0.00045877942, w: 0.9999999}
-        inSlope: {x: -0.005147003, y: -0.0000023613393, z: 0, w: 0}
-        outSlope: {x: -0.005147003, y: -0.0000023613393, z: 0, w: 0}
+        value: {x: -0.000000003632125, y: -0.000000014942822, z: 0.00045877945, w: 0.9999999}
+        inSlope: {x: -0.0051524676, y: -0.00000048368776, z: -0.0000011641532, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
@@ -45,7 +45,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Armature/Spine03/Spine03.001/Spine03.002/Neck/Head
+    path: Armature/Spine01/Spine02/Spine03/Neck/Head
   m_CompressedRotationCurves: []
   m_EulerCurves: []
   m_PositionCurves:
@@ -82,7 +82,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Armature/Spine03/UpperArm.l
+    path: Armature/Spine01/UpperArm.l
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -116,7 +116,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Armature/Spine03/UpperArm.r
+    path: Armature/Spine01/UpperArm.r
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -128,7 +128,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 383621716
+      path: 4209378507
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -137,7 +137,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3973228343
+      path: 15284648
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -146,7 +146,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3867758153
+      path: 1083346855
       attribute: 2
       script: {fileID: 0}
       typeID: 4
@@ -183,26 +183,26 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: -0.0000000040576653
-        inSlope: 0.0051470054
-        outSlope: 0.0051470054
+        inSlope: 0
+        outSlope: 0.005166237
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.7083334
-        value: 0.0016543966
-        inSlope: -0.022794055
-        outSlope: -0.022794055
+        value: 0.0016543968
+        inSlope: -0.02274766
+        outSlope: -0.022782944
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.8333334
-        value: -0.0000000036321248
-        inSlope: -0.005147003
-        outSlope: -0.005147003
+        value: -0.000000003632125
+        inSlope: -0.0051524676
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -211,7 +211,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.x
-    path: Armature/Spine03/Spine03.001/Spine03.002/Neck/Head
+    path: Armature/Spine01/Spine02/Spine03/Neck/Head
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -222,17 +222,17 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 0.00000091260625
-        inSlope: 0.0000023613406
-        outSlope: 0.0000023613406
+        inSlope: 0
+        outSlope: 0.0000022408076
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.7083334
-        value: 0.00000088676177
-        inSlope: -0.000012169836
-        outSlope: -0.000012169836
+        value: 0.0000008867617
+        inSlope: -0.000012282751
+        outSlope: -0.000013053977
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -240,8 +240,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.8333334
         value: -0.000000014942822
-        inSlope: -0.0000023613393
-        outSlope: -0.0000023613393
+        inSlope: -0.00000048368776
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -250,7 +250,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.y
-    path: Armature/Spine03/Spine03.001/Spine03.002/Neck/Head
+    path: Armature/Spine01/Spine02/Spine03/Neck/Head
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -260,26 +260,26 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.00045877942
-        inSlope: -0.0000000048894435
-        outSlope: -0.0000000048894435
+        value: 0.00045877945
+        inSlope: 0
+        outSlope: -0.00000024652655
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.7083334
-        value: 0.00045877864
-        inSlope: 0.000000023748726
-        outSlope: 0.000000023748726
+        value: 0.00045877858
+        inSlope: -0.00000016435104
+        outSlope: -0.0000011641532
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.8333334
-        value: 0.00045877942
-        inSlope: 0
+        value: 0.00045877945
+        inSlope: -0.0000011641532
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
@@ -289,7 +289,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.z
-    path: Armature/Spine03/Spine03.001/Spine03.002/Neck/Head
+    path: Armature/Spine01/Spine02/Spine03/Neck/Head
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -308,9 +308,9 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.7083334
-        value: 0.99999857
-        inSlope: 0.000039339066
-        outSlope: 0.000039339066
+        value: 0.9999985
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -328,7 +328,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.w
-    path: Armature/Spine03/Spine03.001/Spine03.002/Neck/Head
+    path: Armature/Spine01/Spine02/Spine03/Neck/Head
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -367,7 +367,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Armature/Spine03/UpperArm.l
+    path: Armature/Spine01/UpperArm.l
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -406,7 +406,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Armature/Spine03/UpperArm.l
+    path: Armature/Spine01/UpperArm.l
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -445,7 +445,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Armature/Spine03/UpperArm.l
+    path: Armature/Spine01/UpperArm.l
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -484,7 +484,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Armature/Spine03/UpperArm.r
+    path: Armature/Spine01/UpperArm.r
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -523,7 +523,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Armature/Spine03/UpperArm.r
+    path: Armature/Spine01/UpperArm.r
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -562,7 +562,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Armature/Spine03/UpperArm.r
+    path: Armature/Spine01/UpperArm.r
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -602,7 +602,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.x
-    path: Armature/Spine03/Spine03.001/Spine03.002/Neck/Head
+    path: Armature/Spine01/Spine02/Spine03/Neck/Head
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -641,7 +641,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.y
-    path: Armature/Spine03/Spine03.001/Spine03.002/Neck/Head
+    path: Armature/Spine01/Spine02/Spine03/Neck/Head
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -680,7 +680,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.z
-    path: Armature/Spine03/Spine03.001/Spine03.002/Neck/Head
+    path: Armature/Spine01/Spine02/Spine03/Neck/Head
     classID: 4
     script: {fileID: 0}
     flags: 0

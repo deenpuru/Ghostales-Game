@@ -12,7 +12,7 @@ public class Player3D_Movement : MonoBehaviour
     private Vector3 _moveDirection;
     private bool _isWaiting = true;
 
-    private void Update()
+    private void FixedUpdate()
     {
         Vector2 _movement = new Vector2(0, 0);
 
