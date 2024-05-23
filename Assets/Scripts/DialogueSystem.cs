@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class DialogueController : MonoBehaviour
+public class DialogueSystem : MonoBehaviour
 {
     
     [SerializeField] private GameObject _dialogueContainer;
