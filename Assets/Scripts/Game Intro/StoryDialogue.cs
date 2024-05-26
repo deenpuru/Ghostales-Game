@@ -20,13 +20,13 @@ public class StoryDialogue : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _dialogueText;
     [SerializeField] private float _delayUntilDialogueShows;
 
+    [Header("Phases")]
+    [SerializeField] private List<DialoguePhase> _dialoguePhases;
+
     private int _currentSentenceIndex = 0;
     private int _currentPhaseIndex = 0;
     private float _dialogueSpeed = 0.03f;
     private bool _canInteract = false;
-
-    [Header("Phases")]
-    [SerializeField] private List<DialoguePhase> _dialoguePhases;
 
     void Start()
     {
