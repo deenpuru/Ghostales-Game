@@ -56,10 +56,23 @@ public class StoryDialogue : MonoBehaviour
         _dialogueText.text = "";
         _playableDirector.playableAsset = phase.timeline;
         _playableDirector.Play();
-        yield return new WaitForSeconds((float)phase.timeline.duration + _delayUntilDialogueShows);
-        _dialogueContainer.SetActive(true);
-        yield return new WaitForSeconds(0.2f);
-        NextSentence();
+        if (phase.dialogueSentences.Length > 0)
+        {
+            yield return new WaitForSeconds((float)phase.timeline.duration + _delayUntilDialogueShows);
+            _dialogueContainer.SetActive(true);
+            yield return new WaitForSeconds(0.2f);
+            NextSentence();
+        }
+        else
+        {
+            yield return new WaitForSeconds((float)phase.timeline.duration);
+            _currentPhaseIndex++;
+
+            if (_currentPhaseIndex < _dialoguePhases.Count)
+            {
+                StartCoroutine(PlayPhase(_currentPhaseIndex));
+            }
+        }
     }
 
     private void NextSentence()
