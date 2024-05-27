@@ -3046,7 +3046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &726338460
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5705,7 +5705,7 @@ BoxCollider2D:
   m_Offset: {x: 0.0077436566, y: -0.041053772}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.9147898, y: 0.31531528}
+    pivot: {x: 0.9147898, y: 0.08258253}
     oldSize: {x: 0.64, y: 0.68}
     newSize: {x: 0.64, y: 0.68}
     adaptiveTilingThreshold: 0.5
@@ -9857,7 +9857,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.9943182
+  orthographic size: 1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
