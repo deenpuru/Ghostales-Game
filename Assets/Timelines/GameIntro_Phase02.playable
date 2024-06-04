@@ -330,7 +330,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 1292474159143221635}
-    m_Duration: 1.3166667222976685
+    m_Duration: 1.3333333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: -3224761208250799149}
     m_EaseInDuration: 0
@@ -586,7 +586,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1.3333334
-        value: 1
+        value: 0.95703
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -655,7 +655,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1.3333334
-        value: 1
+        value: 0.95703
         inSlope: 0
         outSlope: 0
         tangentMode: 136

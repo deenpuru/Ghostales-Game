@@ -17,14 +17,21 @@ public class StoryDialogue : MonoBehaviour
     [Header("General Information")]
     [SerializeField] private PlayableDirector _playableDirector;
     [SerializeField] private GameObject _dialogueContainer;
+    [SerializeField] private GameObject _portraitGameObject;
+    [SerializeField] private GameObject _portraitNameGameObject;
     [SerializeField] private TextMeshProUGUI _dialogueText;
     [SerializeField] private float _delayUntilDialogueShows;
+
+
+    //remember to set this number back to 0 - the reason it's on 5 is because you wanted to work on the main menu without going through all the phases when in PLAY MODE
+    [Header("set it to zero DONT FORGET!!!!")]
+    [SerializeField] private int _currentPhaseIndex = 0;
+    
 
     [Header("Phases")]
     [SerializeField] private List<DialoguePhase> _dialoguePhases;
 
     private int _currentSentenceIndex = 0;
-    private int _currentPhaseIndex = 0;
     private float _dialogueSpeed = 0.03f;
     private bool _canInteract = false;
 
@@ -59,6 +66,17 @@ public class StoryDialogue : MonoBehaviour
         if (phase.dialogueSentences.Length > 0)
         {
             yield return new WaitForSeconds((float)phase.timeline.duration + _delayUntilDialogueShows);
+
+            if (_currentPhaseIndex == 4)
+            {
+                _portraitGameObject.SetActive(false);
+                _portraitNameGameObject.SetActive(false);
+                _dialogueText.fontSize = 40;
+                _dialogueText.alignment = TextAlignmentOptions.Center;
+                _dialogueText.alignment = TextAlignmentOptions.Midline;
+                _dialogueText.margin = new Vector4(10, -11f, 10, 8.5f);
+            }
+
             _dialogueContainer.SetActive(true);
             yield return new WaitForSeconds(0.2f);
             NextSentence();
@@ -80,7 +98,6 @@ public class StoryDialogue : MonoBehaviour
         if (_currentPhaseIndex < _dialoguePhases.Count)
         {
             DialoguePhase currentPhase = _dialoguePhases[_currentPhaseIndex];
-
             if (_currentSentenceIndex < currentPhase.dialogueSentences.Length)
             {
                 _canInteract = false;
