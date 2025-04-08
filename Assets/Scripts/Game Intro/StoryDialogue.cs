@@ -3,110 +3,130 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 using TMPro;
+using UnityEngine.UI;
+
+[System.Serializable]
+public class DialoguePhase
+{
+    public PlayableAsset timeline;
+    public string[] dialogueSentences;
+}
 
 public class StoryDialogue : MonoBehaviour
 {
     [Header("General Information")]
     [SerializeField] private PlayableDirector _playableDirector;
-    [SerializeField] private GameObject _dialogueContrainer;
+    [SerializeField] private GameObject _dialogueContainer;
+    [SerializeField] private GameObject _portraitGameObject;
+    [SerializeField] private GameObject _portraitNameGameObject;
     [SerializeField] private TextMeshProUGUI _dialogueText;
-    [SerializeField] private string[] _dialogueSentences;
-    [SerializeField] private string[] _dialogueSentencesPhase02;
     [SerializeField] private float _delayUntilDialogueShows;
 
-    private int _element = 0;
+
+    //remember to set this number back to 0 - the reason it's on 5 is because you wanted to work on
+    //the main menu without going through all the phases when in PLAY MODE
+
+    [Header("set it to zero DONT FORGET!!!!")]
+    [SerializeField] private int _currentPhaseIndex = 0;
+    
+
+    [Header("Phases")]
+    [SerializeField] private List<DialoguePhase> _dialoguePhases;
+
+    private int _currentSentenceIndex = 0;
     private float _dialogueSpeed = 0.03f;
     private bool _canInteract = false;
 
-    [Header("Phase 01")]
-    [SerializeField] private PlayableAsset _timelinePart01;
-
-    [Header("Phase 02")]
-    [SerializeField] private PlayableAsset _timelinePart02;
-
-    // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(FirstPhase());
+        if (_dialoguePhases.Count > 0)
+        {
+            StartCoroutine(PlayPhase(_currentPhaseIndex));
+        }
+        else
+        {
+            Debug.LogError("No dialogue phases set in the inspector");
+        }
     }
+
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space) && _canInteract == true)
+        if (Input.GetKeyUp(KeyCode.Space) && _canInteract)
         {
             NextSentence();
         }
     }
-    IEnumerator FirstPhase()
-    {
-        _dialogueText.text = "";
-        _playableDirector.playableAsset = _timelinePart01;
-        _playableDirector.Play();
-        yield return new WaitForSeconds((float)_timelinePart01.duration + _delayUntilDialogueShows);
-        _dialogueContrainer.SetActive(true);
-        yield return new WaitForSeconds(0.2f);
-        NextSentence();   
-    }
 
-    IEnumerator SecondPhase()
+    private IEnumerator PlayPhase(int phaseIndex)
     {
-        Debug.Log("phase 2 is playing");
-        yield return new WaitForSeconds(1f);
-        _dialogueText.text = "";
-        _playableDirector.playableAsset = _timelinePart02;
-        _playableDirector.Play();
-        yield return new WaitForSeconds((float)_timelinePart02.duration + _delayUntilDialogueShows);
-        _dialogueContrainer.SetActive(true);
-        yield return new WaitForSeconds(0.2f);
+        _currentSentenceIndex = 0;
+        DialoguePhase phase = _dialoguePhases[phaseIndex];
 
-        if (_element <= _dialogueSentencesPhase02.Length - 1)
+        _dialogueText.text = "";
+        _playableDirector.playableAsset = phase.timeline;
+        _playableDirector.Play();
+        if (phase.dialogueSentences.Length > 0)
         {
-            _canInteract = false;
-            _dialogueText.text = "";
-            StartCoroutine(WriteSentencePhase02());
+            yield return new WaitForSeconds((float)phase.timeline.duration + _delayUntilDialogueShows);
+
+            if (_currentPhaseIndex == 4)
+            {
+                _portraitGameObject.SetActive(false);
+                _portraitNameGameObject.SetActive(false);
+                _dialogueText.fontSize = 40;
+                _dialogueText.alignment = TextAlignmentOptions.Center;
+                _dialogueText.alignment = TextAlignmentOptions.Midline;
+                _dialogueText.margin = new Vector4(10, -11f, 10, 8.5f);
+            }
+
+            _dialogueContainer.SetActive(true);
+            yield return new WaitForSeconds(0.2f);
+            NextSentence();
         }
         else
         {
-            _dialogueContrainer.SetActive(false);
-            //StartCoroutine(SecondPhase());
+            yield return new WaitForSeconds((float)phase.timeline.duration);
+            _currentPhaseIndex++;
+
+            if (_currentPhaseIndex < _dialoguePhases.Count)
+            {
+                StartCoroutine(PlayPhase(_currentPhaseIndex));
+            }
         }
-       
     }
 
     private void NextSentence()
     {
-        if (_element <= _dialogueSentences.Length - 1)
+        if (_currentPhaseIndex < _dialoguePhases.Count)
         {
-            _canInteract = false;
-            _dialogueText.text = "";
-            StartCoroutine(WriteSentence());
+            DialoguePhase currentPhase = _dialoguePhases[_currentPhaseIndex];
+            if (_currentSentenceIndex < currentPhase.dialogueSentences.Length)
+            {
+                _canInteract = false;
+                _dialogueText.text = "";
+                StartCoroutine(WriteSentence(currentPhase.dialogueSentences));
+            }
+            else
+            {
+                _dialogueContainer.SetActive(false);
+                _currentPhaseIndex++;
+
+                if (_currentPhaseIndex < _dialoguePhases.Count)
+                {
+                    StartCoroutine(PlayPhase(_currentPhaseIndex));
+                }
+            }
         }
-        else
-        {
-            _dialogueContrainer.SetActive(false);
-            StartCoroutine(SecondPhase());
-        }
-     
-    }
-    
-    private IEnumerator WriteSentence()
-    {
-        foreach (char Character in _dialogueSentences[_element].ToCharArray())
-        {
-            _dialogueText.text += Character;
-            yield return new WaitForSeconds(_dialogueSpeed);
-        }
-        _element++;
-        _canInteract = true;
     }
 
-    private IEnumerator WriteSentencePhase02()
+    private IEnumerator WriteSentence(string[] sentences)
     {
-        foreach (char Character in _dialogueSentencesPhase02[_element].ToCharArray())
+        foreach (char character in sentences[_currentSentenceIndex].ToCharArray())
         {
-            _dialogueText.text += Character;
+            _dialogueText.text += character;
             yield return new WaitForSeconds(_dialogueSpeed);
         }
-        _element++;
+        _currentSentenceIndex++;
         _canInteract = true;
     }
 }

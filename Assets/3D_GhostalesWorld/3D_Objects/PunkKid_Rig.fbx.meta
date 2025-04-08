@@ -7,13 +7,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 6459d871d8064334c88733cbd87f55b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dark Grey
+    second: {fileID: 2100000, guid: 45a9072b688384942870b3f18d769c42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light Grey
+    second: {fileID: 2100000, guid: 79877a294c2f39f46875a07d42902283, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Lineart
+    second: {fileID: 2100000, guid: b30df57a9c464754f860a6f978590523, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
     second: {fileID: 2100000, guid: b30df57a9c464754f860a6f978590523, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: ShirtSymbol
     second: {fileID: 2100000, guid: a0138ab7dc8276145ad4007e4c56ede4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 77eb9a251d1d6bc4787152eb4f2f9a6a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -168,7 +193,7 @@ ModelImporter:
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0

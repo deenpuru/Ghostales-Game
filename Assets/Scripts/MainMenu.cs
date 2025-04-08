@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Color _hoverColor;
     [SerializeField] private Color _normalColor;
     [SerializeField] private TextMeshProUGUI[] _buttons;
+    [SerializeField] private GameObject _gameIntro;
+    [SerializeField] private GameObject _mainMenu;
 
     [Space(20)]
 
@@ -72,7 +74,10 @@ public class MainMenu : MonoBehaviour
         {
             if (_pointerPosition.transform.localPosition == _firstButton)
             {
-                SceneManager.LoadScene("Town");
+                _gameIntro.SetActive(true);
+                _mainMenu.SetActive(false);
+
+                //SceneManager.LoadScene("2D_Town");
             }
 
             if (_pointerPosition.transform.localPosition == _secondButton)
