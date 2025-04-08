@@ -23,7 +23,9 @@ public class StoryDialogue : MonoBehaviour
     [SerializeField] private float _delayUntilDialogueShows;
 
 
-    //remember to set this number back to 0 - the reason it's on 5 is because you wanted to work on the main menu without going through all the phases when in PLAY MODE
+    //remember to set this number back to 0 - the reason it's on 5 is because you wanted to work on
+    //the main menu without going through all the phases when in PLAY MODE
+
     [Header("set it to zero DONT FORGET!!!!")]
     [SerializeField] private int _currentPhaseIndex = 0;
     
